@@ -1,0 +1,121 @@
+/* Estilos generales pd => nomas me veo como yo negro */
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+body{
+    background-color: #2f2f2f;
+    display: grid;
+    height: 100vh;
+    place-content: center;
+}
+
+/* Estilos del contenedor */
+
+.container{
+    background-color: #b2b2b2b2;
+    height: 250px;
+    width: 450px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    padding: 1rem;
+    border-radius: 1.2rem;
+}
+/* estilo para cuando se presione una tecla 
+(para el container) --> 
+box-shadow: 1px 0 23px 3px rgb(38, 132, 255); */
+
+/* Estilos para el Drum-Pad  (below thisl line) */
+
+.pad{
+    display: grid;
+    gap: 8px;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+}
+.pad-item{
+    border-radius: 1rem;
+    border: none;
+    outline: none;
+    box-shadow: 2px 4px 5px;
+    transition: .14s all;
+}
+.pad-item:active{
+    background: #aaaaaa;
+    box-shadow: 5px 6px 10px 0 black;
+}
+
+/* Estilos para los controles de sonido */
+
+/* Generales */
+.controls{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.label{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-left: 1.2rem;
+    position: relative;
+}
+
+/* Estilos para los checkboxes */
+
+.checkbox{
+    position: absolute;
+    top: 20px;
+    height: 32px;
+    width: 70px;
+    opacity: 0;
+}
+
+.checkbox-span{
+    width: 70px;
+    height: 30px;
+    
+    border: 1px solid black;
+
+    position: relative;
+    z-index: 1;
+    border-radius: 100px;
+    background-color: #f2f2f2;
+
+    transition: border ease-in-out .3s;
+}
+
+.checkbox-span::after{
+    content: ' ';
+    
+    position: absolute;
+    top: 2px;
+    left: 3px;
+
+    border-radius: 50%;
+
+    height: 24px;
+    width: 25px;
+    background-color: rgb(110, 110, 110);   
+
+    transition: ease-in-out all .3s;
+}
+
+.checkbox:checked + .checkbox-span::after{
+    background-color: rgb(38, 132, 255);
+    transform: translate(38px)
+}
+
+.checkbox:checked + .checkbox-span{
+    border: 1px solid rgb(19, 121, 255);
+    box-shadow: 0 0 8px 1px rgb(38, 132, 255);
+}
+/* Estilos para los audios */
+
+audio{
+    display: none;
+}

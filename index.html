@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drum Pad</title>
+    <script src="pre.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="pad">
+            <button class="pad-item" value="Q">
+                Q
+                <audio src="./sources/RP4_KICK_1.mp3" type="mpeg/audio" controls="false" data-sound="RP4_KICK_1" id="sound-1"></audio>
+            </button>
+            <button class="pad-item" value="W">
+                W
+                <audio src="./sources/Heater-1.mp3" type="mpeg/audio" controls="false" id="sound-2"></audio>
+            </button>
+            <button class="pad-item" value="E">
+                E
+                <audio src="./sources/Heater-2.mp3" type="mpeg/audio" controls="false" id="sound-3"></audio>
+            </button>
+            <button class="pad-item" value="A">
+                A
+                <audio src="./sources/Heater-3.mp3" type="mpeg/audio" controls="false" id="sound-4"></audio>
+            </button>
+            <button class="pad-item" value="S">
+                S
+                <audio src="./sources/Heater-4_1.mp3    " type="mpeg/audio" controls="false" id="sound-5"></audio>
+            </button>
+            <button class="pad-item" value="D">
+                D
+                <audio src="./sources/Heater-6.mp3" type="mpeg/audio" controls="false" id="sound-6"></audio>
+            </button>
+            <button class="pad-item" value="Z">
+                Z
+                <audio src="./sources/Cev_H2.mp3" type="mpeg/audio" controls="false" id="sound-7"></audio>
+            </button>
+            <button class="pad-item" value="X">
+                X
+                <audio src="./sources/Dsc_Oh.mp3" type="mpeg/audio" controls="false" id="sound-8"></audio>
+            </button>
+            <button class="pad-item" value="C">
+                C
+                <audio src="./sources/Kick_n_Hat.mp3" type="mpeg/audio" controls="false" id="sound-9"></audio>
+            </button>
+        </div>
+        <div class="controls">
+           <label for="on/off" class="label label-checkbox">
+                ON/OFF
+               <input checked="true" type="checkbox" class="checkbox" id="on/off">
+               <span class="checkbox-span"></span>
+           </label> 
+           <label for="volumen" class="label range">
+            Volumen
+               <input type="range" class="volume" id="volumen">
+           </label>
+           <label for="type-of-sound" class="label label-checkbox">
+                Sounds
+                <input type="checkbox" class="checkbox" id="type-of-sound">
+                <span class="checkbox-span"></span>
+           </label>
+            
+        </div>
+    </div>
+</body>
+</html>
+
+<!-- Planes: 
+    Importar icono de musica (A color)
+    Importar icono de volumen
+-->
